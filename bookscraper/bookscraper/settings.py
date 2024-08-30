@@ -27,8 +27,8 @@ SCRAPEOPS_NUM_RESULTS = 5
 #     '181.170.240.139:5678',
 # ]
 
-SCRAPEOPS_API_KEY = 'a5d08dfe-d8f1-41ac-83e3-fa9bbfdfaef2'
-SCRAPEOPS_PROXY_ENABLED = True
+# SCRAPEOPS_API_KEY = 'a5d08dfe-d8f1-41ac-83e3-fa9bbfdfaef2'
+# SCRAPEOPS_PROXY_ENABLED = True
 
 # SCRAPEOPS_PROXY_SETTINGS = {'country': 'us'}
 
@@ -72,11 +72,11 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
     # "bookscraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
-    # "bookscraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+    "bookscraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
     # "bookscraper.middlewares.BookscraperDownloaderMiddleware": 500,
     # "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
     # "rotating_proxies.middlewares.BanDetectionMiddleware": 620
-    "scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk": 750
+    # "scrapeops_scrapy_proxy_sdk.scrapeops_scrapy_proxy_sdk.ScrapeOpsScrapyProxySdk": 750
 }
 
 # Enable or disable extensions
